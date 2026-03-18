@@ -917,7 +917,6 @@ function _hideLoad(){document.getElementById('appLoader').classList.add('hn');}
 // FIREBASE STARTUP  (replaces direct initData/checkSession call at bottom)
 // ═══════════════════════════════════════
 async function fbInit(){
-  _showLoad('Connecting to MedLab database…');
   try{
     const snap=await DB.ref('/').once('value');
     const data=snap.val()||{};
